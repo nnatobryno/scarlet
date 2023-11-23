@@ -167,7 +167,7 @@ transform: scaleX(1);
  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Showcase / Hero Section*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 section#showcase {
     height: 100vh;
-    background-image: url('img/full-bg-07.jpg');
+    background-image: url('full-bg-07.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
