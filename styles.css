@@ -167,7 +167,7 @@ transform: scaleX(1);
  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Showcase / Hero Section*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 section#showcase {
     height: 100vh;
-    background-image: url('full-bg-07.jpg');
+    background-image: url('img/full-bg-07.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -183,6 +183,8 @@ div.showcase__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 4rem; /* i introduced*/
+    
 
     animation: hero 2s cubic-bezier(0.68,-0.55,0.27,1.55);
 }
@@ -397,9 +399,14 @@ section#services {
 }
 
 .service:hover::after, 
-.service:active::after {
-    transform: scaleX(1);
-      
+.service:active::after  {
+    transform: scaleX(1);  
+}
+
+/* white text effect on hover */
+.service:hover{
+    color:rgb(212, 211, 211);
+    transition: color 1s;
 }
 
 .service i,
@@ -416,10 +423,189 @@ section#services {
     font-size: 3rem;
     /* text-transform: uppercase; */
 }
+
+section#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: calc(1rem + 2vw);
+    background-color: var(--tertiary-color);
+}
+
+.skills__design, .skills__coding {
+    padding: calc(1rem + 2vw);
+    text-transform: uppercasing;
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
+
+.skills__design--title, 
+.skills__coding--title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.skills__design h4, 
+.skills__coding h4 {
+    font-size: 2rem;
+    color: white;
+}
+
+
+.skills__design--progress, 
+.skills__coding--progress {
+    position: relative;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.skills__design--progress span, .skills__coding--progress span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+    background-color: var(--secondary-color);
+
+    border-radius: 1rem 0 0 1rem;
+
+}
+
+.skills__design-progress__1 {
+animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes design-1 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+.skills__design-progress__2 {
+animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes design-2 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 85%;
+    }
+}
+.skills__design-progress__3 {
+animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes design-3 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 60%;
+    }
+}
+.skills__design-progress__4 {
+animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes design-4 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 70%;
+    }
+}
+
+.skills__coding-progress__1 {
+animation: coding-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes coding-1 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 90%;
+    }
+}
+
+.skills__coding-progress__2 {
+animation: coding-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes coding-2 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 95%;
+    }
+}
+.skills__coding-progress__3 {
+animation: coding-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes coding-3 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 40%;
+    }
+}
+.skills__coding-progress__4 {
+animation: coding-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+
+@keyframes coding-4 {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 1510px){
+    body {
+        width: 1510px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 900px){
     section#showcase{
-        background-position: 100%;
+        background-position: 90%;
         align-items: flex-end;
+        
     }
 }
 @media screen and (max-width: 610px) {
@@ -536,11 +722,11 @@ section#services {
     margin: 0 0 calc(1rem + 2vw);
 }
 
-.services__title {
+.services__title, .skills__design--title, .skills__coding--title {
     font-size: calc(1.2rem + 2vw);
 }
 
-.services-para {
+.services-para, .skills__design h4, .skills__coding hr {
     font-size: calc(0.8rem + 1.5vw);
 }
 }
