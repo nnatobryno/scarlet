@@ -841,7 +841,7 @@ section#services {
 
 @media screen and (max-width: 460px) {
     .testimonials__card--content{
-        bottom: 0;
+        top: 0;
         height: 80%;
         width: 80%;
         transform-origin: bottom;
